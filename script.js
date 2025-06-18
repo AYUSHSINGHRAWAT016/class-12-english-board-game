@@ -1,14 +1,37 @@
 
 const chapters = [
-  { chapter: "The Last Lesson", qs: [
-    {q:"Why was Franz surprised at school?", a:["No German lesson","Teacher absent","Extra homework"], ans:"No German lesson"},
-    {q:"Who taught the lesson?", a:["M Hamel","Franz","Authority"], ans:"M Hamel"}]},
-  { chapter: "My Mother at Sixty-Six", qs:[
-    {q:"Poet worries about mother’s ___?", a:["sleep","health","travel"], ans:"health"}]},
-  { chapter: "Deep Water", qs:[
-    {q:"What fear did Douglas have?", a:["Dogs","Water","Flying"], ans:"Water"}]},
-  { chapter: "Lost Spring", qs:[
-    {q:"Who is Saheb?", a:["Worker","Child","Teacher"], ans:"Child"}]}
+  {
+    chapter: "The Last Lesson",
+    qs: [
+      { q: "Why was Franz surprised at school?", a: ["No German lesson", "Teacher absent", "Extra homework"], ans: "No German lesson" },
+      { q: "Who taught the last lesson?", a: ["M Hamel", "Franz", "Parents"], ans: "M Hamel" },
+      { q: "Why was M. Hamel sad?", a: ["Retirement", "Last French class", "Lost book"], ans: "Last French class" }
+    ]
+  },
+  {
+    chapter: "My Mother at Sixty-Six",
+    qs: [
+      { q: "What is the tone of the poem?", a: ["Joyful", "Fearful", "Melancholy"], ans: "Melancholy" },
+      { q: "What worried the poet?", a: ["Mother’s job", "Mother’s ageing", "Train delay"], ans: "Mother’s ageing" },
+      { q: "What is the poet afraid of losing?", a: ["Youth", "Mother", "Time"], ans: "Mother" }
+    ]
+  },
+  {
+    chapter: "Deep Water",
+    qs: [
+      { q: "What did Douglas fear?", a: ["Dogs", "Water", "Heights"], ans: "Water" },
+      { q: "What helped him overcome fear?", a: ["Practice", "Instructor", "Books"], ans: "Instructor" },
+      { q: "Where did the incident happen?", a: ["Lake", "Swimming pool", "River"], ans: "Swimming pool" }
+    ]
+  },
+  {
+    chapter: "Lost Spring",
+    qs: [
+      { q: "Who is Saheb?", a: ["Doctor", "Child ragpicker", "Teacher"], ans: "Child ragpicker" },
+      { q: "Why did Saheb leave Dhaka?", a: ["No food", "School closure", "Storm"], ans: "No food" },
+      { q: "What does the title 'Lost Spring' refer to?", a: ["Childhood lost in poverty", "Seasons", "Festival"], ans: "Childhood lost in poverty" }
+    ]
+  }
 ];
 
 let pos = -1, score = 0;
@@ -33,7 +56,7 @@ document.getElementById("roll-btn").onclick = () => {
     return;
   }
   highlight();
-  if (Math.random() < 0.6) askQuestion();
+  askQuestion();
 };
 
 function highlight() {
